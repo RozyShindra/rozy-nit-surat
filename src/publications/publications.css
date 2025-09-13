@@ -1,0 +1,25 @@
+/* Research Section */
+.research-list {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.research-card h3 {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-12);
+  line-height: var(--line-height-tight);
+}
+
+.conference {
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-16);
+  font-weight: var(--font-weight-medium);
+}
+
+.tech-stack h4 {
+  font-size: var(--font-size-md);
+  color: var(--color-text);
+  margin-bottom: var(--space-12);
+}

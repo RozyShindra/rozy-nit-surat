@@ -1,0 +1,54 @@
+/* Experience Section */
+.experience-list {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.experience-card {
+  margin-bottom: var(--space-24);
+}
+
+.experience-card h3 {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-8);
+}
+
+.experience-card h4 {
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  margin-bottom: var(--space-8);
+  font-weight: var(--font-weight-medium);
+}
+
+.location {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-16);
+}
+
+.achievements {
+  list-style: none;
+  padding: 0;
+}
+
+.achievements li {
+  padding: var(--space-12) 0;
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+  position: relative;
+  padding-left: var(--space-20);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.achievements li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+.achievements li:last-child {
+  border-bottom: none;
+}

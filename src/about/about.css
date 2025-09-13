@@ -1,0 +1,44 @@
+/* About Section */
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content p {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--space-24);
+}
+
+.specializations {
+  text-align: left;
+  margin-top: var(--space-32);
+}
+
+.specializations h3 {
+  font-size: var(--font-size-xl);
+  color: var(--color-text);
+  margin-bottom: var(--space-16);
+}
+
+.specializations ul {
+  list-style: none;
+  padding: 0;
+}
+
+.specializations li {
+  padding: var(--space-8) 0;
+  color: var(--color-text-secondary);
+  position: relative;
+  padding-left: var(--space-20);
+}
+
+.specializations li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+}
