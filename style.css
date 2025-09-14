@@ -570,7 +570,7 @@ select.form-control {
   box-shadow: var(--shadow-sm);
   overflow: hidden;
   transition: box-shadow var(--duration-normal) var(--ease-standard);
-  padding: var(--space-16);
+  padding: var(--space-24);
 
 }
 

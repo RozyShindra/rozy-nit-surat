@@ -4,6 +4,10 @@
   margin: 0 auto;
 }
 
+.research-card {
+  margin-bottom: var(--space-24);
+}
+
 .research-card h3 {
   font-size: var(--font-size-xl);
   color: var(--color-primary);
