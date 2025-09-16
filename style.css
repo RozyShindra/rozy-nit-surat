@@ -954,6 +954,7 @@ select.form-control {
   flex-wrap: wrap;
   gap: var(--space-8);
   margin-top: var(--space-12);
+  margin-bottom: var(--space-16);
 }
 
 .tech-tag {
