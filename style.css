@@ -946,15 +946,13 @@ select.form-control {
 
 
 
-
-
 /* Tech Tags */
 .tech-tags {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-8);
   margin-top: var(--space-12);
-  margin-bottom: var(--space-16);
+  margin-bottom: var(--space-24);
 }
 
 .tech-tag {
