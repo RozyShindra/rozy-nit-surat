@@ -3,7 +3,8 @@
     <div class="experience-list">
         <div class="card experience-card">
             <div class="experience-logo-container">
-                <img src="https://raw.githubusercontent.com/RozyShindra/rozy-nit-surat/refs/heads/main/assests/images/logos/tataelectronics.png" alt="TATA Electronics Logo" class="exp-logo">
+                <img src="https://raw.githubusercontent.com/RozyShindra/rozy-nit-surat/refs/heads/main/assests/images/logos/tataelectronics.png"
+                    alt="TATA Electronics Logo" class="exp-logo">
                 <div class="experience-text">
                     <h3>Artificial Intelligence Intern</h3>
                     <h4>TATA Electronics Private Limited</h4>
@@ -11,44 +12,376 @@
                 </div>
             </div>
 
+
+            <p class="summary">
+                Researched and engineered AI/ML solutions for manufacturing optimization and predictive quality control.
+                Worked on real-time anodization quality prediction, glue optimization, and visual defect detection —
+                integrating machine learning and computer vision into industrial processes. Achieved
+                <strong>~98% prediction accuracy</strong> in anodization modeling and
+                <strong>>95% defect detection accuracy</strong>, reducing defects by ~30% and boosting throughput by
+                ~20%.
+            </p>
+
+            <!-- Achievements Summary -->
+            <h3>Achievements</h3>
             <ul class="achievements">
-                <li>Material Process Optimization: Designed the SAM based model for UV images, achieved 95% glue
-                    application accuracy, reducing NG products by 30%. Enhanced gluing speed, leading to a 20% increase
-                    in process throughput</li>
-                <li>Computer Vision for Quality Control: Built a Computer vision-based system that reduced human error
-                    by 30% via automated defect detection. Boosted throughput to 6,000 parts/shift with 20% reduction in
-                    evaluation time.</li>
-                <li>Anodization Prediction Model: Developed ML models (Ensemble + Neural Nets) to predict color, gloss,
-                    texture, and thickness with up to 97% accuracy. Collaborated with cross-functional teams.</li>
+                <li>Designed and deployed <strong>real-time anodization prediction models</strong> achieving ~98%
+                    accuracy and enabling proactive process control.</li>
+                <li>Built a <strong>glue optimization pipeline</strong> using segmentation (K-means, SAM) to ensure
+                    balanced glue distribution across 36–40 regions, paving the way for automated material usage
+                    control.</li>
+                <li>Implemented <strong>visual defect detection system</strong> with YOLO, surpassing 95% accuracy,
+                    reducing defect rate by 30% and improving throughput by 20%.</li>
             </ul>
+            <div class="tech-tags">
+                <span class="tech-tag">Computer Vision</span>
+                <span class="tech-tag">Image Segmentation</span>
+                <span class="tech-tag">Object Detection</span>
+                <span class="tech-tag">Industrial AI</span>
+                <span class="tech-tag">Predictive Modeling</span>
+                <span class="tech-tag">Machine Learning</span>
+                <span class="tech-tag">Deep Learning</span>
+            </div>
+
+            <!-- Visual Defect Detection -->
+            <h3>Research & Experiment</h3>
+            <ul class="detailed-work">
+                <li class="phase">
+                    <h3 class="phase-title">Visual Defect Detection using Computer Vision</h3>
+                    <p class="phase-desc">
+                        Designed and implemented object detection models using YOLO for high-resolution defect
+                        detection.
+                        Localized component part deformation and part-level anomalies with custom anchor tuning, IoU
+                        optimization,
+                        and class-specific augmentation. Automated CAD-based validation of material zones and
+                        dynamically flagged
+                        insufficient or excess application. <br>
+                        Achieved <strong>>95% detection accuracy</strong>, reducing related defects by ~30% and
+                        increasing throughput by ~20%.
+                    </p>
+                    <ul class="learning-outcomes">
+                        <li>Learned to apply deep learning object detection to manufacturing images.</li>
+                        <li>Understood integration of CAD geometry with CV models for validation.</li>
+                        <li>Gained insights into augmentations and anchor tuning for industrial datasets.</li>
+                    </ul>
+                    <ul class="skills-learned">
+                        <li>YOLO (object detection)</li>
+                        <li>Image augmentation & anchor tuning</li>
+                        <li>IoU optimization</li>
+                        <li>High-resolution industrial CV pipelines</li>
+                    </ul>
+                </li>
+
+                <!-- Anodization Quality Prediction -->
+                <li class="phase">
+                    <h3 class="phase-title">Real-Time Anodization Quality Prediction</h3>
+                    <p class="phase-desc">
+                        Built predictive ML models using process + sensor data (temperature, time, concentration,
+                        chemical parameters)
+                        to predict anodization surface attributes — color, gloss, texture, thickness. <br>
+                        Preprocessed multivariate datasets, applied dimensionality reduction, experimented with
+                        classical ML algorithms,
+                        ensembles, and neural networks. Introduced tolerance-based improvements to refine results. <br>
+                        Reached <strong>~97–98% prediction accuracy</strong>, enabling proactive quality correction and
+                        real-time control.
+                    </p>
+                    <ul class="learning-outcomes">
+                        <li>Understood the link between sensor data and product surface properties.</li>
+                        <li>Gained practice in applying ensembles + NN to multivariate industrial datasets.</li>
+                        <li>Learned to design tolerance-aware metrics for business-critical predictions.</li>
+                    </ul>
+                    <ul class="skills-learned">
+                        <li>Classical ML algorithms & ensembles</li>
+                        <li>Neural networks for regression/classification</li>
+                        <li>Dimensionality reduction</li>
+                        <li>R², tolerance-based evaluation</li>
+                    </ul>
+                </li>
+
+                <!-- Glue Optimization -->
+                <li class="phase">
+                    <h3 class="phase-title">Glue Optimization via Image Segmentation</h3>
+                    <p class="phase-desc">
+                        Developed a CV pipeline to optimize glue application. Used UV images of glued parts and applied
+                        segmentation
+                        (K-means clustering, statistical methods, and Segment Anything Model) to measure glue
+                        distribution across
+                        ~36–40 predefined zones. <br>
+                        Designed a feedback mechanism for automatic control of glue amount per area based on segmented
+                        distribution.
+                    </p>
+                    <ul class="learning-outcomes">
+                        <li>Learned industrial application of image segmentation for material optimization.</li>
+                        <li>Understood closed-loop feedback design to control material usage automatically.</li>
+                        <li>Explored segmentation models (statistical vs modern foundation models).</li>
+                    </ul>
+                    <ul class="skills-learned">
+                        <li>K-Means clustering</li>
+                        <li>Segment Anything Model (SAM)</li>
+                        <li>Statistical + deep segmentation techniques</li>
+                        <li>Image-based process control</li>
+                    </ul>
+                </li>
+
+                <!-- Foundations -->
+                <li class="phase">
+                    <h3 class="phase-title">Foundations — Shop Floor Research & Data Understanding</h3>
+                    <p class="phase-desc">
+                        Began by visiting the manufacturing shop floor, exploring machine mechanisms, and identifying
+                        areas
+                        where AI could assist workers and improve throughput. Collaborated with engineering, quality,
+                        and business teams
+                        to understand workflows and refine business problems. <br>
+                        Collected datasets from CNC machines, sensors, and high-resolution imaging systems for
+                        downstream ML/CV tasks.
+                    </p>
+                    <ul class="learning-outcomes">
+                        <li>Learned to translate business requirements into AI opportunities.</li>
+                        <li>Understood shop floor operations and machine-sensor data capture pipelines.</li>
+                        <li>Developed cross-functional collaboration skills (engineering + business + quality teams).
+                        </li>
+                    </ul>
+                    <ul class="skills-learned">
+                        <li>Problem scoping & business understanding</li>
+                        <li>Industrial data collection (CNC, sensors, imaging)</li>
+                        <li>Domain exploration & requirement gathering</li>
+                    </ul>
+                </li>
+            </ul>
+
+
         </div>
         <div class="card experience-card">
             <div class="experience-logo-container">
-                <img src="https://raw.githubusercontent.com/RozyShindra/rozy-nit-surat/refs/heads/main/assests/images/logos/toshiba.png" alt="Toshiba Logo" class="exp-logo">
+                <img src="https://raw.githubusercontent.com/RozyShindra/rozy-nit-surat/refs/heads/main/assests/images/logos/toshiba.png"
+                    alt="Toshiba Logo" class="exp-logo">
                 <div class="experience-text">
                     <h3>Research & Development Intern</h3>
                     <h4>Toshiba Software (India) Private Limited</h4>
                     <p class="location">Bengaluru, Karnataka | July 2024 – Jan 2025</p>
                 </div>
             </div>
+            <p class="summary">
+                Conducted end-to-end research and engineering for Named Entity Recognition (NER),
+                Keyphrase Extraction (KPE), and Text Summarization. Built and benchmarked hybrid pipelines
+                combining fine-tuned extractors with LLMs, applied SFT and PEFT (LoRA, Prefix Tuning, Prompt Tuning,
+                P-Tuning) techniques,
+                and documented results across multiple open-source datasets — achieving <strong>~80% F1 (15–20%
+                    improvement over prior baselines)</strong>
+                on both nested and flat NER tasks.
+            </p>
+            <!-- Achievements summary -->
+            <h3>Achievements</h3>
             <ul class="achievements">
                 <li>Proposed Architecture: Designed and implemented a scalable NLP architecture to optimize model
                     performance and operational efficiency for information extraction. Improved information extraction
                     accuracy by 15%, achieving an 80% F1 score, making the model more reliable for domain-specific
                     tasks.</li>
                 <li>Advanced NLP Solutions: Delivered state-of-the-art systems for Named Entity Recognition (NER),
-                    Keyphrase Extraction (KPE), and Text Summarization, by leveraging LLMs (Llama, Mistral, Pegasus 10+
-                    LLMs).</li>
+                    Keyphrase Extraction (KPE), and Text Summarization, by leveraging LLMs (LLaMA, Mistral, Pegasus —
+                    and 10+ LLM variants during benchmarking).</li>
                 <li>Fine-Tuning Expertise: Fine-tuned Large Language Models (LLMs) using Supervised Fine-Tuning (SFT)
                     and Parameter-Efficient Fine-Tuning (PEFT) methods like LoRA, Prefix Tuning, and Prompt Tuning for
-                    domain-specific applications. Benchmarking of multiple LLMs on a customized dataset, given metrics,
-                    and documentation of everything.</li>
+                    domain-specific applications. Benchmarked multiple LLMs on customized datasets, recorded metrics,
+                    and documented all experiments for reproducibility.</li>
             </ul>
+            <div class="tech-tags">
+                <span class="tech-tag">Generative AI</span>
+                <span class="tech-tag">Large Language Models</span>
+                <span class="tech-tag">Supervised Fine-Tuning (SFT)</span>
+                <span class="tech-tag">Parameter-Efficient Fine-Tuning (PEFT)</span>
+                <span class="tech-tag">Quantization</span>
+                <span class="tech-tag">Information Extraction</span>
+                <span class="tech-tag">Text Summarization</span>
+                <span class="tech-tag">Named Entity Recognition (NER)</span>
+                <span class="tech-tag">Keyphrase Extraction (KPE)</span>
+                <span class="tech-tag">Prompt Engineering</span>
+                <span class="tech-tag">NLP Pipelines</span>
+                <span class="tech-tag">NER Datasets</span>
+            </div>
+
+
+            <!-- Most recent -->
+            <h3>Research & Experiment</h3>
+            <ul class="detailed-work">
+                <li class="phase">
+                    <h3 class="phase-title">Text Summarization</h3>
+                    <p class="phase-desc">
+                        Focused on extractive and abstractive summarization using models such as BART, PEGASUS and T5.
+                        Evaluated on domain-specific datasets and improved performance using Parameter-Efficient
+                        Fine-Tuning
+                        (PEFT) techniques — LoRA, Prefix Tuning and Prompt Tuning — to adapt pre-trained summarizers for
+                        custom data.
+                        Results were validated with ROUGE, BERTScore and BARTScore; extensive documentation captured
+                        metric-level improvements.
+                    </p>
+                    <ul class="learning-outcomes">
+                        <li>Learned to benchmark abstractive vs extractive summarization and identify domain-specific
+                            failure modes.</li>
+                        <li>Gained practical experience applying PEFT to reduce compute while improving domain
+                            performance.
+                        </li>
+                        <li>Developed robust evaluation pipelines using ROUGE, BERTScore and BARTScore for reproducible
+                            comparison.</li>
+                    </ul>
+                    <ul class="skills-learned">
+                        <li>PEFT (LoRA, Prefix Tuning, Prompt Tuning)</li>
+                        <li>Summarization frameworks: BART, PEGASUS, T5</li>
+                        <li>Model evaluation: ROUGE, BERTScore, BARTScore, precision/recall/F1</li>
+                        <li>Experiment logging & reproducible reporting</li>
+                    </ul>
+                </li>
+
+
+
+                <!-- Hybrid approach -->
+                <li class="phase">
+                    <h3 class="phase-title">Hybrid NER Approach — Key Research Contribution</h3>
+                    <p class="phase-desc">
+                        Designed and implemented a two-stage hybrid pipeline:
+                        <span class="step">(1) A fine-tuned Keyphrase Extractor to surface domain-relevant candidate
+                            phrases</span>
+                        <span class="step">(2) A few-shot fine-tuned LLM (LLaMA / Qwen / Mistral) to perform
+                            context-aware entity extraction</span>
+                    </p>
+                    This combination achieved ~80% F1 on nested and flat NER tasks — a 15–20% improvement compared to
+                    baseline pipelines.
+                    Comprehensive experiment logs documented datasets, prompts, model checkpoints and evaluation
+                    metrics.
+                    </p>
+                    <ul class="learning-outcomes">
+                        <li>Validated the hypothesis that targeted KPE + LLM reasoning outperforms standalone approaches
+                            in
+                            domain settings.</li>
+                        <li>Learned how to design pipelines that balance lightweight extractors with heavy LLM reasoning
+                            for
+                            efficiency and accuracy.</li>
+                        <li>Gained experience in error analysis on nested vs flat entities and iterating on extractor +
+                            prompt design.</li>
+                    </ul>
+                    <ul class="skills-learned">
+                        <li>Hybrid pipeline design (KPE → LLM)</li>
+                        <li>Few-shot prompting and prompt template design</li>
+                        <li>Model orchestration & result reproducibility</li>
+                        <li>Performance analysis for nested vs flat entity recognition</li>
+                    </ul>
+                </li>
+
+                <!-- LLM experiments -->
+                <li class="phase">
+                    <h3 class="phase-title">LLM Experiments for NER</h3>
+                    <p class="phase-desc">
+                        Performed systematic prompt engineering experiments (zero-shot, few-shot, chain-of-thought,
+                        tree-of-thought)
+                        across open-source LLMs and many NER datasets (ACE2004/2005, GENIA, CoNLL2003, MultiNERD,
+                        OntoNotes,
+                        TweetNER7, CrossNER, MIT datasets).
+                        Followed up with Supervised Fine-Tuning (SFT) and combined SFT + prompt engineering to improve
+                        precision and recall.
+                    </p>
+                    <ul class="learning-outcomes">
+                        <li>Understood when prompts are sufficient and when fine-tuning is required (low-resource vs
+                            high-resource trade-offs).</li>
+                        <li>Learned advanced prompting patterns (CoT/ToT) and their practical limits for structured IE
+                            tasks.</li>
+                        <li>Captured model behavior across domains and adapted prompts/schema to reduce hallucination
+                            and
+                            improve consistency.</li>
+                    </ul>
+                    <ul class="skills-learned">
+                        <li>Prompt engineering: zero-shot, few-shot, chain-of-thought, tree-of-thought</li>
+                        <li>LLM fine-tuning (SFT) and combining SFT with prompts</li>
+                        <li>Open-source LLMs: LLaMA, Qwen, Mistral (experimentation & benchmarking)</li>
+                        <li>Artifact/version management for model checkpoints</li>
+                    </ul>
+                </li>
+
+                <!-- Keyphrase extraction -->
+                <li class="phase">
+                    <h3 class="phase-title">Keyphrase Extraction Research</h3>
+                    <p class="phase-desc">
+                        Carried out an in-depth benchmarking of keyphrase extraction methods — statistical (YAKE, RAKE),
+                        embedding-based (KeyBERT),
+                        position/graph-based (PositionRank) and transformer-based KPE variants. Compared domain
+                        generality
+                        and semantic recall,
+                        and used this analysis to drive the design of the hybrid pipeline.
+                    </p>
+                    <ul class="learning-outcomes">
+                        <li>Identified strengths/weaknesses of lightweight statistical methods vs contextual/transformer
+                            methods.</li>
+                        <li>Learned how KPE errors propagate to downstream NER and how to mitigate via
+                            prompt/fine-tuning
+                            strategies.</li>
+                        <li>Designed evaluation criteria balancing precision of extracted keyphrases and downstream
+                            entity
+                            recall.</li>
+                    </ul>
+                    <ul class="skills-learned">
+                        <li>Keyphrase extraction: YAKE, RAKE, KeyBERT, PositionRank</li>
+                        <li>Embedding-based semantic matching and cluster-based selection</li>
+                        <li>Downstream evaluation design (KPE → NER impact measurement)</li>
+                    </ul>
+                </li>
+
+                <!-- Non-LLM experiments -->
+                <li class="phase">
+                    <h3 class="phase-title">Non-LLM NER Experiments</h3>
+                    <p class="phase-desc">
+                        Implemented and benchmarked non-LLM architectures including Binder and DiffusionNER across
+                        nested
+                        and flat NER datasets.
+                        Binder consistently outperformed DiffusionNER on nested datasets (e.g., GENIA: Binder ~79.8 F1
+                        vs
+                        DiffusionNER ~69.6),
+                        establishing strong baselines for comparison with LLM approaches.
+                    </p>
+                    <ul class="learning-outcomes">
+                        <li>Learned practical trade-offs: non-LLM efficiency vs LLM generalization in low-resource
+                            scenarios.</li>
+                        <li>Built baseline reproducibility pipelines and used them as a comparison target for later
+                            hybrid
+                            approaches.</li>
+                        <li>Understood dataset-specific behaviors (why Binder excels on nested entities and where it
+                            fails).
+                        </li>
+                    </ul>
+                    <ul class="skills-learned">
+                        <li>Non-LLM models: Binder, DiffusionNER</li>
+                        <li>Dataset handling for ACE, GENIA, CoNLL, OntoNotes, MultiNERD</li>
+                        <li>Baseline experiment design and metric-driven comparisons</li>
+                    </ul>
+                </li>
+
+                <!-- Foundations -->
+                 <li class="phase">
+                    <h3 class="phase-title">Research Foundations (Initial Work)</h3>
+                    <p class="phase-desc">
+                        Kicked off with a thorough literature survey covering modern NER and UIE research (GLiNER,
+                        InstructUIE, GoLLIE, UniversalNER,
+                        KnowCoder, DiffusionNER). Studied prompt paradigms, annotation guideline effects and established
+                        experiment/annotation standards.
+                        Created the initial documentation and experiment templates used throughout the project.
+                    </p>
+                    <ul class="learning-outcomes">
+                        <li>Built a strong theoretical foundation in NER/UIE research and annotation practices.</li>
+                        <li>Learned how to design reproducible experiments and consistent documentation standards.</li>
+                        <li>Established clear baselines, dataset splits, and annotation guidelines for downstream work.</li>
+                    </ul>
+                    <ul class="skills-learned">
+                        <li>Literature review and critical analysis of NER/UIE papers</li>
+                        <li>Experiment planning, annotation guideline design</li>
+                        <li>Technical writing and reproducible documentation</li>
+                    </ul>
+                </li> 
+            </ul>
+
         </div>
 
         <div class="card experience-card">
             <div class="experience-logo-container">
-                <img src="https://raw.githubusercontent.com/RozyShindra/rozy-nit-surat/refs/heads/main/assests/images/logos/svnit.png" alt="Toshiba Logo" class="exp-logo">
+                <img src="https://raw.githubusercontent.com/RozyShindra/rozy-nit-surat/refs/heads/main/assests/images/logos/svnit.png"
+                    alt="Toshiba Logo" class="exp-logo">
                 <div class="experience-text">
                     <h3>Teaching Assistant</h3>
                     <h4>Sardar Vallabhbhai National Institute of Technology</h4>

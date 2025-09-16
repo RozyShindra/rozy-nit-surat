@@ -70,6 +70,115 @@
   display: block;
 }
 
+.summary {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  padding: 1.2rem 1.5rem;
+  border-left: 4px solid #06b6d4; /* accent line */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', Roboto, 'Fira Sans', sans-serif;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+
+.summary strong {
+  color: #06b6d4;
+  font-weight: 700;
+}
+
+/* Light mode styles */
+@media (prefers-color-scheme: light) {
+  .summary {
+    background: linear-gradient(135deg, #f9fafb, #ffffff);
+    color: #111827; /* dark text */
+    border-left-color: #0ea5e9; /* slightly brighter accent */
+  }
+
+  .summary strong {
+    color: #0ea5e9;
+  }
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .summary {
+    background: linear-gradient(135deg, #1f2937, #111827);
+    color: #e5e5e5; /* light text */
+    border-left-color: #06b6d4;
+  }
+
+  .summary strong {
+    color: #06b6d4;
+  }
+}
+
+
+.phase {
+  margin: 2rem 0; /* top and bottom spacing */
+  padding: 1.5rem 2rem;
+  background: var(--phase-bg, #f9fafb);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  list-style: none;
+}
+
+.phase:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.phase-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #06b6d4; /* accent cyan */
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid rgba(6, 182, 212, 0.3);
+  padding-bottom: 0.4rem;
+}
+
+.phase-desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #374151; /* neutral gray */
+  margin-bottom: 1rem;
+}
+
+.learning-outcomes,
+.skills-learned {
+  margin: 0.8rem 0 1.5rem 1.2rem; /* spacing + indentation */
+  /* padding-left: 1.2rem; */
+  border-left: 3px solid rgba(6, 182, 212, 0.4);
+}
+
+.learning-outcomes li,
+.skills-learned li {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Dark mode auto support */
+@media (prefers-color-scheme: dark) {
+  .phase {
+    background: #1f2937;
+    color: #e5e7eb;
+  }
+  .phase-desc {
+    color: #d1d5db;
+  }
+  .learning-outcomes,
+  .skills-learned {
+    border-left-color: rgba(6, 182, 212, 0.6);
+  }
+}
+
+.phase-desc .step {
+  display: block;  /* forces new line */
+  margin-top: 0.4rem;
+}
+
 
 
 

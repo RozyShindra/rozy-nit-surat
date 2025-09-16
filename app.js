@@ -1,5 +1,5 @@
 // Wait for DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Mobile navigation toggle
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Toggle mobile menu
     if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
+        navToggle.addEventListener('click', function () {
             navMenu.classList.toggle('active');
             navToggle.classList.toggle('active');
         });
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Close mobile menu when clicking on a nav link
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function () {
             if (navMenu) {
                 navMenu.classList.remove('active');
             }
@@ -27,20 +27,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Smooth scrolling for navigation links (only for internal links)
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
-            
+
             // Only prevent default for internal anchor links
             if (href && href.startsWith('#')) {
                 e.preventDefault();
                 const targetId = href;
                 const targetSection = document.querySelector(targetId);
-                
+
                 if (targetSection) {
                     const navbar = document.querySelector('.navbar');
                     const navHeight = navbar ? navbar.offsetHeight : 60;
                     const targetPosition = targetSection.offsetTop - navHeight;
-                    
+
                     window.scrollTo({
                         top: targetPosition,
                         behavior: 'smooth'
@@ -75,15 +75,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const navbar = document.querySelector('.navbar');
         const navHeight = navbar ? navbar.offsetHeight : 60;
         const scrollPosition = window.scrollY + navHeight + 100;
-        console.log({sections, navbar, navHeight, scrollPosition});
-        
+
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
             const sectionId = section.getAttribute('id');
             const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-        console.log({sectionId, navLink, sectionHeight, sectionTop});
 
 
             if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
@@ -104,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleNavbarScroll() {
         const navbar = document.querySelector('.navbar');
         if (!navbar) return;
-        
+
         const scrollTop = window.scrollY;
 
         if (scrollTop > 50) {
@@ -121,15 +119,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Intersection Observer for fade-in animations
     function createObserver() {
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0,  // ✅ trigger as soon as ANY pixel is visible
+            rootMargin: '0px 0px -50px 0px'  // trigger slightly before bottom enters
         };
 
-        const observer = new IntersectionObserver(function(entries) {
+        const observer = new IntersectionObserver(function (entries, observer) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
+                    // ✅ Animate in
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
+
+                    // ✅ Stop observing once visible (saves performance)
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
@@ -137,12 +139,15 @@ document.addEventListener('DOMContentLoaded', function() {
         // Observe all cards and sections
         const elementsToObserve = document.querySelectorAll('.card, .section');
         elementsToObserve.forEach(element => {
+            // Initial hidden state
             element.style.opacity = '0';
             element.style.transform = 'translateY(20px)';
             element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+
             observer.observe(element);
         });
     }
+
 
     // Initialize intersection observer
     createObserver();
@@ -151,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function typeEffect() {
         const heroName = document.querySelector('.hero-name');
         if (!heroName) return;
-        
+
         const text = heroName.textContent;
         heroName.textContent = '';
         heroName.style.opacity = '1';
@@ -164,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(type, 100);
             }
         }
-        
+
         // Start typing effect after a short delay
         setTimeout(type, 500);
     }
@@ -175,11 +180,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add hover effect to tech tags
     const techTags = document.querySelectorAll('.tech-tag, .skill-tag');
     techTags.forEach(tag => {
-        tag.addEventListener('mouseenter', function() {
+        tag.addEventListener('mouseenter', function () {
             this.style.transform = 'scale(1.05)';
         });
-        
-        tag.addEventListener('mouseleave', function() {
+
+        tag.addEventListener('mouseleave', function () {
             this.style.transform = 'scale(1)';
         });
     });
@@ -187,15 +192,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add click-to-copy functionality for email
     const emailLink = document.querySelector('a[href^="mailto:"]');
     if (emailLink) {
-        emailLink.addEventListener('click', function(e) {
+        emailLink.addEventListener('click', function (e) {
             // Don't prevent default for mailto links - let them work normally
             const email = this.textContent;
-            
+
             // Also copy to clipboard as additional functionality
             if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(email).then(function() {
+                navigator.clipboard.writeText(email).then(function () {
                     showToast('Email copied to clipboard!');
-                }).catch(function() {
+                }).catch(function () {
                     // Fallback for older browsers
                     fallbackCopyTextToClipboard(email);
                 });
@@ -305,7 +310,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(scrollButton);
 
         // Show/hide scroll button based on scroll position
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             if (window.scrollY > 500) {
                 scrollButton.style.opacity = '1';
                 scrollButton.style.visibility = 'visible';
@@ -316,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Scroll to top when clicked
-        scrollButton.addEventListener('click', function() {
+        scrollButton.addEventListener('click', function () {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
@@ -324,11 +329,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Hover effect
-        scrollButton.addEventListener('mouseenter', function() {
+        scrollButton.addEventListener('mouseenter', function () {
             this.style.transform = 'scale(1.1)';
         });
 
-        scrollButton.addEventListener('mouseleave', function() {
+        scrollButton.addEventListener('mouseleave', function () {
             this.style.transform = 'scale(1)';
         });
     }
@@ -360,7 +365,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Performance optimization: Throttle scroll events
     function throttle(func, limit) {
         let inThrottle;
-        return function() {
+        return function () {
             const args = arguments;
             const context = this;
             if (!inThrottle) {
@@ -375,5 +380,5 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', throttle(highlightActiveNav, 100));
     window.addEventListener('scroll', throttle(handleNavbarScroll, 100));
 
-    console.log('Portfolio website initialized successfully!');
+    console.log('nothing intresting here, ping me on rozysvnit@gmail.com');
 });
